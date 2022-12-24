@@ -1,0 +1,282 @@
+.profile{
+    min-height: 80vh;
+   .profile_title{
+    padding: 50px 0 10px;
+    h1{
+        margin-bottom: 30px;
+        font-size: 32px;
+        font-weight: 600;
+    }
+   }
+   .col_8{
+    .card{
+        border-radius: 16px;
+        padding: 36px;
+        margin: 30px 0;
+        background-color:$white;
+        .card_header{
+            margin-bottom: 30px;
+            font-size: 32px;
+            display: flex;
+            line-height: 48px;
+            justify-content: space-between;
+            font-weight: 500;
+            .profile_actions{
+                button{
+                    border: 0;
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    font-family:$main_font!important;
+                    font-weight: 500;
+                    min-width: 100px;
+                    box-sizing: border-box;
+                    transition: transform .2s ease-in-out;
+                    line-height: 24px;
+                    border-radius: 8px;
+                    text-transform: none;
+                    cursor: pointer;
+                    &:first-child{
+                        background-color:$primary_color;
+                        color: $white;
+                    }
+                    &:last-child{
+                        margin-left: 10px;
+                        background-color:red;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .card_body{
+            border-top: 1px solid $border;
+            padding: 20px 0;
+            .avatar_main{
+                padding: 16px;
+                .avatar{
+                    margin: 0.8em 0 0.5em;
+                    height: 85px;
+                    width: 85px;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 50%;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .profile_grid{
+                display: grid;
+                    grid-template-columns: repeat(1,1fr);
+                .person_info{
+                    display: grid;
+                    grid-template-columns: 1fr 4fr;
+                    -moz-box-align: center;
+                    align-items: center;
+                    grid-gap: 16px;
+                    padding: 10px;
+                    div{
+                        line-height: 1.6;
+                        font-size:20px;
+                        &:first-child{
+                            font-weight: 700;
+                        }
+                        &:last-child{
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   }
+}
+.react-responsive-modal-root{
+    .react-responsive-modal-modal{
+        border-radius: 18px;;
+        .edit_profile{
+            max-width: 500px;;
+            h2{
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 20px;;
+            }
+            p{
+                color: rgba(0, 0, 0, 0.54);
+                font-weight: 400;
+                line-height: 20px;
+                font-size: 16px;;
+            }
+            .avatar{
+                margin: 0.8em 0 0.5em;
+                height: 85px;
+                width: 85px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 50%;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+                input{
+                    display: none;
+                }
+                label{
+                    background: rgba(0,0,0,.5);
+                    width: 85px;
+                    position: absolute;
+                    bottom: 0;
+                    height: 1.6em;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    color:#fff;
+                }
+            }
+            input{
+                border: 1px solid $border;
+                border-radius: 8px;
+                outline: 0;
+                padding: 10px;
+                font-size: 15px;
+                line-height: 24px;
+                width: 100%;
+                max-width: 500px;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+                &::placeholder{
+                    text-transform: lowercase;
+                }
+            }
+        }
+        .buttons{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            button{
+                    font-weight: normal;
+                    line-height: 24px;
+                    border-radius: 8px;
+                    text-transform: none;
+                    transition: transform .2s ease-in-out;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    outline: 0;
+                    border: 0;
+                    color: #fff;
+                    background-color: #0066cc;
+                    cursor: pointer;
+                    min-width: 130px;
+                    &:first-child{
+                        color: rgba(0, 0, 0, 0.87);
+                        background: #d6d6d6 !important;
+                        margin-right: 10px;
+                    }
+            }
+        }
+    }
+}
+
+@media (max-width: 932px) {
+    .profile{
+        min-height: auto;
+        .profile_title{
+            padding: 10px;
+            h1{
+                margin-bottom: 15px;
+            }
+        }
+        .col_8{
+            .card{
+                margin-top: 0;
+                .card_body{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .profile_grid{
+                        .person_info{
+                            grid-template-columns: 1fr 1fr;
+                            align-items: center;
+                            text-align: left;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .profile{
+        .profile_title{
+            padding: 15px;
+            padding-left: 0;
+            h1{
+                margin-bottom: 15px;
+            }
+        }
+        .col_8{
+            .card{
+                padding: 10px;
+                .card_header{
+                    display: block;
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: center;
+                    .profile_actions{
+                        display: none;
+                    }
+                }
+                .card_body{
+                    padding: 0;
+                    .profile_grid{
+                        .person_info{
+                            padding: 5px;
+                            div{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .profile_actions{
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        button{
+                            border: 0;
+                            width: 100%;
+                            background-color: transparent;
+                            padding: 10px 20px;
+                            font-size: 18px;
+                            font-family:$main_font!important;
+                            font-weight: 500;
+                            min-width: 100px;
+                            box-sizing: border-box;
+                            transition: transform .2s ease-in-out;
+                            line-height: 24px;
+                            border-radius: 8px;
+                            text-transform: none;
+                            cursor: pointer;
+                            &:first-child{
+                                background-color:$primary_color;
+                                color: $white;
+                            }
+                            &:last-child{
+                                margin-top: 10px;
+                                background-color:red;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

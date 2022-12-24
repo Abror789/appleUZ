@@ -1,0 +1,198 @@
+.one_order{
+  overflow: hidden;
+  padding: 50px 0;
+  min-height: 80vh;
+  .container{
+    .card{
+      background-color:$white;
+      padding: 30px;
+      border-radius: 16px;
+      width: 80%;
+      .top{
+        h2{
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 36px;
+        }
+        p{
+          margin-bottom: 30px;
+          font-weight: 600;
+        }
+      }
+      .status{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        p{
+          font-weight: 600;
+        }
+        span{
+          padding: 6px 12px;
+          color: #fff;
+          font-size: 12px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+        }
+      }
+      .canceled{
+        span{
+          background-color: #c82222;
+        }
+      }
+      .progress{
+        span{
+          background-color:$primary_color;
+          color:$white;
+        }
+      }
+      .end{
+        span{
+          background-color: #22c854;
+          color:$white;
+        }
+      }
+      .rows{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .col-2{
+          h6{
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+         span{
+           font-weight: 600;
+           font-size: 16px;
+         }
+          svg{
+            margin-right: 7px;
+          }
+          img{
+            padding: 0px;
+            width: 24px;
+            height: auto;
+           margin-right: 7px;
+          }
+        }
+      }
+      .products_order{
+        margin-top: 40px;
+        .sum{
+          margin-top: 20px;
+          h2{
+            margin-top: 5px;
+          }
+        }
+        .row{
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .one_order {
+    padding: 20px 0;
+    .container {
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .one_order{
+    padding: 20px 0;
+    .container{
+      .card{
+        width: 100%;
+        padding: 15px 20px;
+        .rows{
+          display: block;
+          .col-2{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            h6{
+              margin-bottom: 0;
+              margin-right: 25px;
+              position: relative;
+              &::after{
+                content: '';
+                position: absolute;
+                left: 105%;
+                top: 50%;
+                right: 0;
+                width: 10px;
+                height: 1px;
+                background-color:$black;
+              }
+            }
+          }
+        }
+        .products_order{
+          .table_div{
+            display: none;
+          }
+          .row{
+            display: block;
+            .card{
+              box-shadow: 0 2px 16px rgb(0 0 0 / 8%);
+              margin-bottom: 30px;
+              border-radius: 8px;
+              padding: 24px;
+              .info{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                h6{
+                  font-weight: 700;
+                  font-size: 18px;
+                  line-height: 1.5rem;
+                  min-width: 150px;
+                }
+                span{
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 1.43;
+                }
+                .status{
+                  display: inline;
+                  text-align: center;
+                  padding: 4px 10px;
+                  color: #fff;
+                  font-size: 14px;
+                  border-radius: 6px;
+                  margin-left: 4px
+                }
+                .progress{
+                  background-color:$primary_color;
+                }
+                .canceled{
+                  background-color: #c82222;
+                }
+                .end{
+                  background-color: #22c854;
+                }
+                &:last-child{
+                  margin-top: 10px;
+                  h6{
+                    font-size: 24px;
+                  }
+                  span{
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

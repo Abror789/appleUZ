@@ -1,0 +1,44 @@
+.category_d{
+  padding: 20px;
+}
+.ReactModal__Content--after-open{
+  .deleteModal{
+    p{
+      font-size: 18px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .buttons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      margin-top: 10px;
+      button{
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-right: 10px;
+        border: 0;
+        border-radius: 8px;
+        font-weight: 900;
+      }
+      .yes{
+        border: 2px solid $primary_color;
+        color:$primary_color;
+      }
+      .no{
+        border: 2px solid red;
+        color:red;
+      }
+    }
+  }
+}
+.add_category{
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,182 @@
+.payment{
+  overflow: hidden;
+  background-color:$white;
+  padding: 50px 0;
+  .container{
+    .payment_title{
+      font-weight: 700;
+      padding: 10px 0;
+      font-size: 36px;
+      line-height: 50px;
+    }
+    .row{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 30px;
+      .left{
+        .line{
+          border-top: 1px solid $border;
+        }
+        .payment_section{
+          margin-top: 20px;
+          .payment_list_title{
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 32px;
+            padding: 30px 0 20px;
+            margin: 0;
+          }
+          .payment_grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+            .col_4{
+              width: 100%;
+              padding: 10px;
+              height: 100%;
+              min-height: 20px;
+              border-radius: 4px;
+              box-shadow: 0 0 2px 1px $border;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              cursor: pointer;
+              h6{
+                text-align: center;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 30px;
+              }
+              svg{
+                height: 50px;
+                transform: scale(1.5);
+              }
+              img{
+                padding: 0px;
+                width: 36px;
+                height: auto;
+                margin-top: 6px;
+              }
+            }
+            .active{
+              box-shadow: 0 0 2px 2px $primary_color;
+            }
+          }
+          input{
+            margin-bottom: 10px;
+            border: 1px solid $border;
+            font-family:$main_font;
+            border-radius: 8px;
+            outline: 0;
+            padding: 10px;
+            font-size: 15px;
+            line-height: 24px;
+            width: 100%;
+            font-weight: 600;
+            max-width: 500px;
+          }
+        }
+        button{
+          border: 1px solid $border;
+          border-radius: 8px;
+          outline: 0;
+          padding: 10px;
+          font-size: 15px;
+          line-height: 24px;
+          width: 100%;
+          max-width: 500px;
+          background:$primary_color;
+          font-family:$main_font;
+          cursor: pointer;
+          color: #fff;
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .right{
+        //overflow: auto;
+        .card{
+          position: sticky;
+          top: 20px;
+          padding: 0 16px;
+          .card_body{
+            border-radius: 6px;
+            border: 1px solid $border;
+            padding: 16px;
+            .cb_header{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 10px;
+              font-size: 22px;
+              font-weight: 700;
+              font-family:$main_font;
+              p{
+                margin: 8px 0;
+              }
+              a{
+                font-size: 18px;
+                color:$primary_color;
+                font-weight: 500;
+                text-decoration: none;
+              }
+            }
+            .cb_info{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 18px;
+              font-weight: 500;
+              p{
+                margin: 8px 0;
+              }
+            }
+            .total_price{
+              font-weight: 700;
+              font-size: 20px;
+              padding: 10px 0;
+              border-top: 1px solid $border;
+              margin-bottom: 0;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              p{
+                margin: 8px 0;
+              }
+            }
+            .c_wrapper{
+              .c_inner{
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                grid-gap: 10px;
+                align-items: center;
+                img{
+                  width: 100%;
+                  height: auto;
+                  max-height: 70px;
+                  object-fit: contain;
+                }
+                .c_details{
+                  padding: 10px;
+                  font-weight: 600;
+                  .product_title{
+                    font-size: 16px;
+                    //line-height: 20px;
+                  }
+                  .product_quantity{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

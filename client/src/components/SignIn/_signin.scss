@@ -1,0 +1,107 @@
+.sign_in{
+  background-color:$white;
+  .container{
+    .sign_center{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 50px 0;
+      margin: auto 0;
+      min-height: 60vh;
+      h1{
+        text-align: center;
+        font-size: 48px;
+        line-height: 56px;
+        font-weight: 700;
+        font-family:$main_font;
+      }
+      .sign_form_div{
+        margin: 10px 0 16px;
+        width: 100%;
+        max-width: 400px;
+        form{
+          margin-top: 20px;
+          max-width: 500px;
+          .phone-input-wrapper{
+            padding: 15px;
+            border: 1px solid $border;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            .PhoneInputCountry{
+              display: none;
+            }
+            input{
+
+              outline: 0;
+              border: 0;
+              font-size: 16px;
+              font-weight: 500;
+              font-family:$main_font;
+            }
+          }
+          .input{
+            padding: 15px;
+            outline: 0;
+            border: 1px solid $border;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            font-family:$main_font;
+            margin-bottom: 10px;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button{
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+          span{
+            color:red;
+          }
+          button{
+            width: 100%;
+            height: 54px;
+            color:$white;
+            background-color:$primary_color;
+            font-size: 18px;
+            transition:all .2s ease-in-out;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 0;
+            font-family:$main_font;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+              background-color:$button_hover;
+            }
+          }
+          a{
+            display: block;
+            margin-left: auto;
+            text-align: right;
+            margin-top: 10px;
+            color:$primary_color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sign_in{
+    .container{
+      .sign_center{
+        padding: 20px 0;
+        min-height: 20vh;
+        h1{
+          font-size: 30px;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}

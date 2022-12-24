@@ -1,0 +1,176 @@
+.newProduct{
+  overflow: hidden;
+  background-color: #f5f5f7;
+  padding: 50px 0;
+  .container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+    position: relative;
+    .mainTitle{
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 52px;
+      text-align: center;
+    }
+    .see_more{
+      position: absolute;
+      right: 5%;
+      color:$black;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+    .carouselCarousel{
+      margin: 35px 0;
+      padding: 0 32px;
+      .card{
+        width: 90%!important;
+        margin-left: 4%;
+        a{
+          display: block;
+          background-color: #fff;
+          width: 100%;
+          padding: 25px 0;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 8px;
+          position: relative;
+          overflow: hidden;
+          .cardImage{
+            height: 200px;
+            min-height: 180px;
+            max-width: 200px;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //position: relative;
+            img{
+              padding: 10px!important;
+              object-fit: contain;
+              transition: all .4s ease;
+              max-width: 100%!important;
+              max-height: 100%;
+            }
+            &:hover img{
+              transform: scale(1.05);
+            }
+          }
+          .title{
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 25px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            color: #1d1d1d;
+            margin: 0;
+            transition: .3s;
+          }
+          .price{
+            display: block;
+            margin-top: 8px;
+            font-size: 17px;
+            line-height: 26px;
+            color: #333;
+            font-weight: 500;
+          }
+          .button{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            width: calc(100% - 32px);
+            margin: 20px 16px 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: #2567c5;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: transform .2s ease-in-out;
+            &:hover{
+              background-color:$button_hover;
+            }
+          }
+          &:hover .title{
+            color:$button_hover!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.newProduct .slick-prev::before{
+  display: none!important;
+}
+.newProduct .slick-prev{
+  color: #8a8a8a!important;
+  height: 48px;
+  width: 48px!important;
+  border-radius: 50%;
+  left: -45px!important;
+  z-index: 99;
+  background: 50%/100% 100% no-repeat!important;
+  background-color: #ececec!important;
+  background-size: 28px!important;
+  background-image: url('/left.png')!important;
+}
+/*  */
+.newProduct .slick-next{
+  color: #8a8a8a!important;
+  right: -45px!important;
+  height: 48px;
+  width: 48px!important;
+  border-radius: 50%;
+  z-index: 99;
+  background: 50%/100% 100% no-repeat!important;
+  background-color: #ececec!important;
+  background-size: 28px!important;
+  background-image: url('/right.png')!important;
+}
+.newProduct .slick-next::before{
+  display: none!important;
+}
+.newProduct .slick-dots{
+  bottom: -50px!important;
+}
+.newProduct .slick-dots li button::before{
+  font-size: 12px!important;
+}
+
+@media (max-width: 932px) {
+  .newProduct{
+    .container{
+      .mainTitle{
+        font-size: 44px;
+        line-height: 48px;
+      }
+    }
+  }
+}
+@media (max-width:600px) {
+  .newProduct{
+    padding: 20px 0;
+    .container{
+      .mainTitle{
+        font-size: 38px;
+        line-height: 42px;
+      }
+      .carouselCarousel{
+        //margin: 20px 0;
+      }
+    }
+  }
+}
